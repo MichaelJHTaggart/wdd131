@@ -1,0 +1,42 @@
+html, body, div,
+h1, h2, ul, li, aside, footer, main, header, nav, img, p, span, a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+  font-family: "Bitcount Grid Single", system-ui, Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+.course-title{
+    display: block;
+}
+
+/* 
+    nav must use flex
+    nav must use a hover effect 
+*/
+nav {
+    display: flex
+}
+
+/* 
+    must limit width
+    must be centered
+    children must use css grid 
+*/
+main {
+
+}
