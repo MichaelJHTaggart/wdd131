@@ -8,6 +8,22 @@ h1, h2, ul, li, aside, footer, main, header, nav, img, p, span, a {
 	vertical-align: baseline;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 5px 0px 2px 0px;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
 html {
   font-family: "Bitcount Grid Single", system-ui, Arial, Helvetica, sans-serif;
   font-optical-sizing: auto;
@@ -25,18 +41,111 @@ html {
 }
 
 /* 
-    nav must use flex
-    nav must use a hover effect 
-*/
-nav {
-    display: flex
-}
-
-/* 
     must limit width
     must be centered
     children must use css grid 
 */
 main {
 
+}
+
+:root {
+    --text-color-heading-light: white;
+    --text-color-heading-dark: black;
+    --primary-header-footer-color: #333333;
+    --primary-main-color: #cccccc;
+}
+
+body {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    color: var(--text-color-heading-light);
+    background-color: var(--primary-header-footer-color);
+    height: 150px;
+    position: relative;
+}
+
+#course-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#course-title > h2 {
+    font-size: 1.5rem;
+}
+
+h1, h2 {
+    font-size: 1rem;
+    font-weight: 100;
+    padding: 16px
+}
+
+nav {
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--text-color-heading-dark);
+    display: flex;
+    justify-content: space-evenly;  
+    color: var(--primary-main-color)
+}
+
+main {
+    background-color: var(--primary-main-color);
+    color: var(--text-color-heading-dark);
+    display: flex;
+}
+
+main > h1 {
+    flex: 75%;
+}
+
+aside {
+    background-color: var(--text-color-heading-light);
+    flex: 25%;
+}
+
+footer {
+    color: var(--text-color-heading-light);
+    text-align: center;
+    background-color: var(--primary-header-footer-color);
+    height: 200px;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+a::before,
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--primary-main-color);
+  transition: all 0.5s;
+}
+
+a::before {
+  top: 0;
+  left: 0;
+}
+
+a:hover::before {
+  width: 100%;
+  transition: width 0.25s ease-in-out;
+}
+
+a:hover::after {
+  width: 100%;
+  transition: width 0.25s ease-in-out 0.25s;
 }
