@@ -8,6 +8,10 @@ h1, h2, ul, li, aside, footer, main, header, nav, img, p, span, a {
 	vertical-align: baseline;
 }
 
+ul {
+    list-style-type: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -100,11 +104,10 @@ nav {
 main {
     background-color: var(--primary-main-color);
     color: var(--text-color-heading-dark);
-    display: flex;
 }
 
 main > h1 {
-    flex: 75%;
+    text-align: center;
 }
 
 aside {
@@ -117,16 +120,20 @@ footer {
     text-align: center;
     background-color: var(--primary-header-footer-color);
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-a {
+nav > a {
   text-decoration: none;
   position: relative;
   overflow: hidden;
 }
 
-a::before,
-a::after {
+nav > a::before,
+nav > a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -135,17 +142,35 @@ a::after {
   transition: all 0.5s;
 }
 
-a::before {
+nav > a::before {
   top: 0;
   left: 0;
 }
 
-a:hover::before {
+nav > a:hover::before {
   width: 100%;
   transition: width 0.25s ease-in-out;
 }
 
-a:hover::after {
+nav > a:hover::after {
   width: 100%;
   transition: width 0.25s ease-in-out 0.25s;
+}
+
+div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 2px dotted var(--primary-header-footer-color);
+    max-width: 300px;
+    border-radius: 5px;
 }
