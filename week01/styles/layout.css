@@ -1,0 +1,76 @@
+:root {
+    --text-color-heading-light: white;
+    --text-color-heading-dark: black;
+    --primary-header-footer-color: #333333;
+    --primary-main-color: #cccccc;
+}
+
+html, body, div,
+h1, h2, ul, li, aside, footer, header, nav {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+body {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    color: var(--text-color-heading-light);
+    background-color: var(--primary-header-footer-color);
+    height: 150px;
+    position: relative;
+}   
+
+h1, h2 {
+    font-size: 1rem;
+    font-weight: 100;
+    padding: 16px
+}
+
+nav {
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--text-color-heading-dark);
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main {
+    background-color: var(--primary-main-color);
+    color: var(--text-color-heading-dark);
+    display: flex;
+}
+
+main > h1 {
+    flex: 75%;
+}
+
+aside {
+    background-color: var(--text-color-heading-light);
+    flex: 25%;
+}
+
+footer {
+    color: var(--text-color-heading-light);
+    text-align: center;
+    background-color: var(--primary-header-footer-color);
+    height: 200px;
+}
