@@ -34,7 +34,7 @@
         right: 20px;
     }
 
-    section:last-child > h2:after{
+    section:last-child > h2::after{
         content: "⛅";
         padding-left: 15px;
     }
