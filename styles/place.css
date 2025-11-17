@@ -4,7 +4,8 @@
     --rice-paper: #FAF7F2;
     --sakura-pink: #F7D4D4;
     --indigo-blue: #26457D;
-    --transparent-rice-paper: color-mix(in srgb, var(--rice-paper) 85%, transparent);
+    /* --transparent-rice-paper: color-mix(in srgb, var(--rice-paper) 85%, transparent); Though totally valid and widely adopted, W3C does NOT like this still */
+    --transparent-rice-paper-replacement: rgba(250, 247, 242, 0.85);
 }
 
 * {
