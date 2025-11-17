@@ -6,7 +6,7 @@
 
     section {
         position: absolute;
-        background-color: color-mix(in srgb, var(--rice-paper) 85%, transparent);
+        background-color: var(--transparent-rice-paper);
         padding: 20px;
         box-shadow: 3px 3px 15px var(--sumi-black)
     }

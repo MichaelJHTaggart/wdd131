@@ -4,6 +4,7 @@
     --rice-paper: #FAF7F2;
     --sakura-pink: #F7D4D4;
     --indigo-blue: #26457D;
+    --transparent-rice-paper: color-mix(in srgb, var(--rice-paper) 85%, transparent);
 }
 
 * {
