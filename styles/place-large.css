@@ -1,0 +1,37 @@
+@media (min-width: 1024px) {
+    main {
+        position: relative;
+        max-width: 1440px;
+    }
+
+    section {
+        position: absolute;
+        background-color: color-mix(in srgb, var(--rice-paper) 85%, transparent);
+        padding: 20px;
+        box-shadow: 3px 3px 15px var(--sumi-black)
+    }
+
+    section > h2 {
+        width: 100%;
+        background-color: var(--indigo-blue);
+        color: var(--rice-paper);
+        padding: 12px 25px;
+        transform: translateX(-30px) translateY(-10px);
+    }
+
+    section:first-of-type {
+        top: 30px;
+        left: 15px;
+    }
+
+    section:last-child {
+        bottom: 30px;
+        right: 20px;
+    }
+
+    picture img {
+        width: 100%;
+        height: auto;
+        border-bottom: 0;
+    }
+}

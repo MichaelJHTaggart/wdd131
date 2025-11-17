@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Japan is a place I wish to visit.">
+    <meta name="keywords" content="Michael J.H. Taggart, WDD 131, Dynamic Web Fundamentals, web development, home page, student project, place page">
+    <meta name="author" content="Michael J.H. Taggart">
+    <title>Japan Place Page</title>
+    <link rel="stylesheet" href="./styles/place.css">
+    <link rel="stylesheet" href="./styles/place-large.css">
+    <script defer src="./scripts/getdates.js"></script>
+    <script defer src="./scripts/place.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;700&family=Nunito:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Japan</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/david-edelstein-N4DbvTUDikw-unsplash-desktop.webp 2091w, images/david-edelstein-N4DbvTUDikw-unsplash-4k.webp 4181w" media="(min-width: 1000px)">
+            <source srcset="images/david-edelstein-N4DbvTUDikw-unsplash-tablet.webp 1045w" media="(min-width: 550px)">
+            <img src="images/david-edelstein-N4DbvTUDikw-unsplash-mobile.webp" alt="Chureito Pagoda with Mount Fuji in the background" width="523" height="349">
+        </picture>
+        <section>
+            <h2 class="section-header">Data</h2>
+            <ol>
+                <li><span class="label">Area:</span> <span class="value">377,975 km²</span></li>
+                <li><span class="label">Population:</span> <span class="value">125,300,000</span></li>
+                <li><span class="label">Capital:</span> <span class="value">Tokyo</span></li>
+                <li><span class="label">Languages:</span> <span class="value">Japanese</span></li>
+                <li><span class="label">Currency:</span> <span class="value">Yen (JPY)</span></li>
+                <li><span class="label">Time Zone:</span> <span class="value">UTC+9 (JST)</span></li>
+                <li><span class="label">Calling Code:</span> <span class="value">+81</span></li>
+                <li><span class="label">Internet TLD:</span> <span class="value">.jp</span></li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 id="section-header">Weather</h2>
+            <div class="weather">
+                <span class="weather-sun"></span>
+                <img src="images/1530374_weather_day_sand_sandstorm_sun_icon.svg" alt="Sunshine and Rain"> 
+            </div>
+            <ol>
+                <li><span class="label">Temperature:</span> <span class="value">18°C</span></li>
+                <li><span class="label">Conditions:</span> <span class="value">Partly Cloudy</span></li>
+                <li><span class="label">Wind:</span> <span class="value">12 km/h</span></li>
+                <li><span class="label">Wind Chill:</span> <span id="windchill" class="value"></span></li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <p>&#x00A9;<span id="currentyear"></span> - Michael J.H. Taggart - United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+:root {
+    --torii-red: #C41E3A;
+    --sumi-black: #1C1C1C;
+    --rice-paper: #FAF7F2;
+    --sakura-pink: #F7D4D4;
+    --indigo-blue: #26457D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: var(--rice-paper);
+    color: var(--sumi-black);
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-bottom: 20px solid var(--torii-red);
+}
+
+header h1 {
+    font-family: "M PLUS 1p", sans-serif;
+    color: var(--indigo-blue);
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+main {
+    margin: 0 auto;
+    background: white;
+}
+
+picture img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid var(--torii-red);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+section:last-child {
+    padding-bottom:  20px;
+}
+
+section h2 {
+    font-family: "M PLUS 1p", sans-serif;
+    color: var(--indigo-blue);
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+ol {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+ol li {
+    display: contents;
+}
+
+li .label {
+    font-weight: bold;
+    color: var(--sumi-black);
+    text-align: right;
+    padding: 0.4rem 0.5rem 0.4rem 0;
+}
+
+li .value {
+    grid-column: 2;
+    font-weight: normal;
+    color: var(--sumi-black);
+    text-align: left;
+    padding: 0.4rem 0 0.4rem 0.5rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--indigo-blue);
+    font-size: 0.9rem;
+    padding-bottom: 25px;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
