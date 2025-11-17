@@ -1,4 +1,8 @@
 @media (min-width: 1024px) {
+    .svg {
+        display: none;
+    }
+
     main {
         position: relative;
         max-width: 1440px;
@@ -27,6 +31,11 @@
     section:last-child {
         bottom: 30px;
         right: 20px;
+    }
+
+    section:last-child > h2:after{
+        content: "⛅";
+        padding-left: 15px;
     }
 
     picture img {
