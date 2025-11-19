@@ -1,0 +1,46 @@
+@media only screen and (min-width: 40em) {
+  #menu {
+    display: none;
+  }
+
+  .navigation,
+  .navigation.show {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: flex-end;
+    background-color: transparent;
+    padding: 0px 30px 0px 0px;
+    position: static;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  body {
+    grid-template-rows: auto 4fr auto;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #temples {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  figure {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  figure img {
+    width: 100%;
+    height: auto;
+  }
+}

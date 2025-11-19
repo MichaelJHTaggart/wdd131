@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Michael J.H. Taggart</title>
+</head>
+<style>
+
+    table {
+         width: 400px;
+        margin: 10px auto;
+        border: thin solid gray;
+        box-shadow: 0 0 10px black;
+        border-collapse: collapse;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: aliceblue;
+    }
+
+    thead {
+        background-color: black;
+    }
+
+    thead tr:first-child{
+        color: white;
+    }
+
+    thead tr:last-child {
+        background-color: gray;
+    }
+
+    tbody th {
+        background-color: black;
+    }
+
+    caption {
+        padding: 10px;
+        caption-side: bottom;
+        color: var(--back);
+        font-size: .85rem;
+    }
+
+    td {
+	    text-align: center;
+    }       
+
+</style>
+<body>
+    <table>
+    <caption>Table 1: Account Feature Comparison</caption>
+    <thead>
+        <tr>
+            <th colspan="4" scope="colgroup">ACME Wildwest Services</th>
+        </tr>
+        <tr>
+            <th style="background-color: black;"></th>
+            <th>Basic</th>
+            <th>Premium</th>
+            <th>Deluxe</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            <td>Feature 1</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>✔️</td>
+        </tr>
+        <tr>
+            <td>Feature 2</td>
+            <td>❌</td>
+            <td>✔️</td>
+            <td>✔️</td>
+        </tr>
+        <tr>
+            <td>Feature 3</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>✔️</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
