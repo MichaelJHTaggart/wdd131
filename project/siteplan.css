@@ -1,0 +1,70 @@
+:root {
+  /* Primary: Royal Blue - Trust and professionalism */
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-light: #3b82f6;
+  
+  /* Secondary: Emerald Green - Growth and success */
+  --color-secondary: #10b981;
+  --color-secondary-dark: #059669;
+  --color-secondary-light: #34d399;
+  
+  /* Accent: Amber Orange - Energy and attention */
+  --color-accent: #f59e0b;
+  --color-accent-dark: #d97706;
+  --color-accent-light: #fbbf24;
+  
+  /* Neutral: Gray Spectrum - Content and structure */
+  --color-gray-900: #111827;
+  --color-gray-700: #374151;
+  --color-gray-600: #4b5563;
+  --color-gray-500: #6b7280;
+  --color-gray-400: #9ca3af;
+  --color-gray-300: #d1d5db;
+  --color-gray-200: #e5e7eb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-50: #f9fafb;
+  
+  /* Semantic colors using the palette */
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-600);
+  --color-text-muted: var(--color-gray-500);
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: var(--color-gray-50);
+  --color-border: var(--color-gray-300);
+}
+
+html, body {
+    font-family: "Inter", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    color: var(--color-text-primary);
+}
+
+pre, code {
+    font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+    font-size: 0.95rem;
+    tab-size: 4;
+    background-color: var(--color-gray-900);
+    color: var(--color-secondary-light)
+}
+
+span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.primary {
+    background: var(--color-primary);
+}
+
+.secondary {
+    background: var(--color-secondary);
+}
+
+.accent {
+    background: var(--color-accent);
+}
+
+.neutral {
+    background: var(--color-gray-900);
+}
