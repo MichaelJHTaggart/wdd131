@@ -27,12 +27,27 @@ const products = [
 ];
 
 const productNameElement = document.getElementById("product-name")
-function generateOptions(){
-    products.forEach((product) => {
-        let newOption = document.createElement("option")
-        newOption.setAttribute("value", product.id)
-        newOption.textContent = product.name
-        productNameElement.appendChild(newOption)
+
+if (productNameElement) {
+    function generateOptions(){
+        products.forEach((product) => {
+            let newOption = document.createElement("option")
+            newOption.setAttribute("value", product.id)
+            newOption.textContent = product.name
+            productNameElement.appendChild(newOption)
+        })
+    }
+    generateOptions()
+
+
+    document.querySelector('form').addEventListener('submit', () => {
+        let count = parseInt(localStorage.getItem('number_of_product_reviews')) || 0;
+        count++
+        localStorage.setItem('number_of_product_reviews', count);
     })
 }
-generateOptions()
+
+const numberOfProductReviews = document.getElementById('number_of_product_reviews')
+if (numberOfProductReviews) {
+    numberOfProductReviews.textContent = localStorage.getItem('number_of_product_reviews')
+}
