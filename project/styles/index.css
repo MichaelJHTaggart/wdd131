@@ -47,25 +47,51 @@ pre, code {
     color: var(--color-secondary-light)
 }
 
-span {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.primary {
-    background: var(--color-primary);
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--color-bg-primary);
 }
 
-.secondary {
-    background: var(--color-secondary);
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-bg-secondary);
+    height: 7dvh;
 }
 
-.accent {
-    background: var(--color-accent);
+header > div,
+header nav ul {
+    display: flex;
+    padding: 1em 2em;
 }
 
-.neutral {
-    background: var(--color-gray-900);
+nav ul {
+    list-style: none;
 }
 
+nav a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    padding: 1em 2em;
+    transition: background-color 150ms ease;
+}
+
+nav a:hover {
+    background-color: var(--color-primary);
+}
+
+nav a.active-link {
+    border-bottom: 2px solid var(--color-text-primary)
+}
+
+nav a.accent-link {
+    background-color: var(--color-accent);
+}
