@@ -4,91 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This assignment requires specific field inputs, a confirmation with a counter, and a user-friendly layout optimized for both mobile and desktop experiences.">
-    <meta name="keywords" content="Michael J.H. Taggart, WDD 131, Dynamic Web Fundamentals, web development, home page, student project, form page">
+    <meta name="description" content="Contact us for questions, feedback, or support about Mastering Dynamic Web Sites">
+    <meta name="keywords" content="Michael J.H. Taggart, WDD 131, Dynamic Web Fundamentals, web development, contact, support">
     <meta name="author" content="Michael J.H. Taggart">
-    <title>Product Review Form</title>
-    <link rel="stylesheet" href="./styles/form.css">
+    <title>Contact Us - Mastering Dynamic Web Sites</title>
+    <link rel="icon" href="./images/favicon.webp" type="image/webp">
     <script defer src="./scripts/getdates.js"></script>
-    <script defer src="./scripts/form.js"></script>
+    <script defer src="./scripts/contact.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/index-medium.css">
+    <link rel="stylesheet" href="./styles/index-large.css">
 </head>
 
 <body>
     <header>
-        <h1>Product Review</h1>
+        <div>
+            <a href="index.html">
+                <img src="./images/logo.webp" alt="Mastering Dynamic Websites logo" width="64" height="64">
+            </a>
+            <h1>Mastering Dynamic Websites</h1>
+        </div>
+        <nav class="bottom-nav">
+            <a href="index.html">Home</a>
+            <a href="topics.html">Topics</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
     </header>
     <main>
-       <form method="get" action="review.html">
-
+        <form method="get" action="contact-confirmation.html">
             <div class="form-group">
-                <label for="product-name">Product Name</label>
-                <select name="product-name" id="product-name" required>
-                    <option value="" disabled selected>Select a Product</option>
-                </select>
-            </div>
-
-            <fieldset>
-                <legend>Overall Rating</legend>
-                <div>
-                    <input type="radio" id="overall-rating1" name="overall-rating" value="1" required>
-                    <label for="overall-rating1">1</label>
-                </div>
-                <div>
-                    <input type="radio" id="overall-rating2" name="overall-rating" value="2" required>
-                    <label for="overall-rating2">2</label>
-                </div>
-                <div>
-                    <input type="radio" id="overall-rating3" name="overall-rating" value="3" required>
-                    <label for="overall-rating3">3</label>
-                </div>
-                <div>
-                    <input type="radio" id="overall-rating4" name="overall-rating" value="4" required>
-                    <label for="overall-rating4">4</label>
-                </div>
-                <div>
-                    <input type="radio" id="overall-rating5" name="overall-rating" value="5" required>
-                    <label for="overall-rating5">5</label>
-                </div>
-            </fieldset>
-
-            <div class="form-group">
-                <label for="date-of-installation">Date of installation</label>
-                <input type="date" id="date-of-installation" name="date-of-installation" required>
-            </div>
-            
-            <fieldset>
-                <legend>Useful Features</legend>
-                <div>
-                    <input type="checkbox" id="durability" name="useful-features" value="durability">
-                    <label for="durability">Durability</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="ease-of-use" name="useful-features" value="ease-of-use">
-                    <label for="ease-of-use">Ease of Use</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="design" name="useful-features" value="design">
-                    <label for="design">Design</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="performance" name="useful-features" value="performance">
-                    <label for="performance">Performance</label>
-                </div>
-            </fieldset>
-
-            <div class="form-group">
-                <label for="written-review">Written Review</label>
-                <textarea id="written-review" name="written-review"></textarea>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
             </div>
 
             <div class="form-group">
-                <label for="username">User Name</label>
-                <input type="text" id="username" name="username">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
             </div>
 
-            <input type="submit" value="Save Product Review">
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
 
-       </form>
+            <input type="submit" value="Send Message">
+        </form>
     </main>
     <footer>
         <p>&#x00A9;<span id="currentyear"></span> - Michael J.H. Taggart - United States of America</p>

@@ -1,0 +1,47 @@
+@media (min-width: 1024px) {
+    header img {
+        height: 48px;
+    }
+
+    main {
+        max-width: 1440px;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    main > picture {
+        max-width: 1000px;
+        margin: 0 auto 3em;
+        height: 15vh;
+    }
+
+    .topic-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .topic-content h3 {
+        font-size: 1.75rem;
+    }
+
+    main form {
+        padding: 2em;
+    }
+
+    main section {
+        padding: 3em 2em;
+        display: block;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    main section h2 {
+        font-size: 2.5rem;
+    }
+
+    main section p {
+        display: block !important;
+    }
+}
+

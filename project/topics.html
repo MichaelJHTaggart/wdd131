@@ -4,71 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Photos of worldwide LDS temples displayed in a simple gallery.">
-    <meta name="keywords" content="Michael J.H. Taggart, WDD 131, Dynamic Web Fundamentals, web development, home page, student project, temple page">
+    <meta name="description" content="Explore topics about mastering dynamic web development">
+    <meta name="keywords" content="Michael J.H. Taggart, WDD 131, Dynamic Web Fundamentals, web development, topics">
     <meta name="author" content="Michael J.H. Taggart">
-    <title>Temple Album Page</title>
-    <link rel="stylesheet" href="./styles/temples.css">
-    <link rel="stylesheet" href="./styles/temples-large.css">
+    <title>Topics - Mastering Dynamic Web Sites</title>
+    <link rel="icon" href="./images/favicon.webp" type="image/webp">
     <script defer src="./scripts/getdates.js"></script>
-    <script defer src="./scripts/temples.js"></script>
+    <script defer src="./scripts/topics-page.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/index-medium.css">
+    <link rel="stylesheet" href="./styles/index-large.css">
 </head>
 
 <body>
     <header>
-        <p>Temple Album</p>
-        <a id="menu"></a>
-        <nav class="navigation">
-            <a href="#">Home</a>
-            <a href="#">Old</a>
-            <a href="#">New</a>
-            <a href="#">Large</a>
-            <a href="#">Small</a>
+        <div>
+            <a href="index.html">
+                <img src="./images/logo.webp" alt="Mastering Dynamic Websites logo" width="64" height="64">
+            </a>
+            <h1>Mastering Dynamic Websites</h1>
+        </div>
+        <nav class="bottom-nav">
+            <a href="index.html">Home</a>
+            <a href="topics.html">Topics</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
     <main>
-        <h1>
-            Home
-        </h1>
-        <figure>
-            <img src="images/mount_timpanogos_utah_temple.webp" alt="Timpanogos Utah Temple">
-            <figcaption>Timpanogos Utah Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/mount_timpanogos_utah_temple.webp" alt="Timpanogos Utah Temple">
-            <figcaption>Timpanogos Utah Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/mount_timpanogos_utah_temple.webp" alt="Timpanogos Utah Temple">
-            <figcaption>Timpanogos Utah Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/mount_timpanogos_utah_temple.webp" alt="Timpanogos Utah Temple">
-            <figcaption>Timpanogos Utah Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/mount_timpanogos_utah_temple.webp" alt="Timpanogos Utah Temple">
-            <figcaption>Timpanogos Utah Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/mount_timpanogos_utah_temple.webp" alt="Timpanogos Utah Temple">
-            <figcaption>Timpanogos Utah Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/mount_timpanogos_utah_temple.webp" alt="Timpanogos Utah Temple">
-            <figcaption>Timpanogos Utah Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/mount_timpanogos_utah_temple.webp" alt="Timpanogos Utah Temple">
-            <figcaption>Timpanogos Utah Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/mount_timpanogos_utah_temple.webp" alt="Timpanogos Utah Temple">
-            <figcaption>Timpanogos Utah Temple</figcaption>
-        </figure>
+        <h1>Topics</h1>
+        <div id="topics-list"></div>
     </main>
     <footer>
         <p>&#x00A9;<span id="currentyear"></span> - Michael J.H. Taggart - United States of America</p>

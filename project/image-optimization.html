@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about image optimization, responsive images, and lazy loading for better web performance">
+    <meta name="keywords" content="Michael J.H. Taggart, WDD 131, Dynamic Web Fundamentals, web development, image optimization, responsive images, lazy loading">
+    <meta name="author" content="Michael J.H. Taggart">
+    <title>Image Optimization - Mastering Dynamic Web Sites</title>
+    <link rel="icon" href="./images/favicon.webp" type="image/webp">
+    <script defer src="./scripts/getdates.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/index-medium.css">
+    <link rel="stylesheet" href="./styles/index-large.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html">
+                <img src="./images/logo.webp" alt="Mastering Dynamic Websites logo" width="64" height="64">
+            </a>
+            <h1>Mastering Dynamic Websites</h1>
+        </div>
+        <nav class="bottom-nav">
+            <a href="index.html">Home</a>
+            <a href="topics.html">Topics</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <picture>
+            <source srcset="./images/unsplash-desktop-3.webp" media="(min-width: 1000px)" sizes="1440px">
+            <source srcset="./images/unsplash-tablet-3.webp" media="(min-width: 550px)" sizes="100vw">
+            <img src="./images/unsplash-mobile-3.webp" alt="Image Optimization" width="400" height="400">
+        </picture>
+        
+        <section class="topic-content">
+            <h2>Image Optimization</h2>
+            <p>
+                As we learned in the course materials this term,
+                "The work of responsive image design is to support smaller page weights and to deliver content on screen size."
+            </p>
+            <p>
+                "Serving desktop-sized images to mobile devices can use 2-4x more data than needed.
+                Instead of a 'one-size-fits-all' approach to images, serve different image sizes to different devices.
+                How many image versions should you create? There is no single 'correct' answer to this question.
+                However, it's common to serve 3-5 different sizes of an image. Serving more image sizes is better for performance,
+                but will take up more space on your servers and require writing a tiny bit more HTML."
+            </p>
+            <p>
+                <a href="https://squoosh.app/" target="_blank" rel="noopener">Squoosh.app</a>
+                can help compress and optimize images.
+            </p>
+            
+            <h3>Responsive Images with Picture Element</h3>
+            <p>
+                "Responsive images are images that scale nicely to fit any browser size.
+                The <code>srcset</code> attribute allows the browser to choose the best image to display based on the device's screen size and resolution.
+                The <code>srcset</code> attribute is used with the <code>picture</code> and <code>source</code> elements."
+            </p>
+            <p>
+               "Srcset supports targeting of different browser ranges. 
+               A different image can be rendered depending on the width of the screen."
+            </p>
+            <p>
+                For this website here is the code where we use this for the topic cards:
+            </p>
+            <pre><code>let picture = document.createElement("picture");
+
+let sourceDesktop = document.createElement("source");
+sourceDesktop.setAttribute("srcset", topic.imageDesktop);
+sourceDesktop.setAttribute("media", "(min-width: 1000px)");
+sourceDesktop.setAttribute("sizes", "1440px");
+
+let sourceTablet = document.createElement("source");
+sourceTablet.setAttribute("srcset", topic.imageTablet);
+sourceTablet.setAttribute("media", "(min-width: 550px)");
+sourceTablet.setAttribute("sizes", "100vw");
+
+let img = document.createElement("img");
+img.setAttribute("src", topic.imageMobile);
+img.setAttribute("alt", topic.title);
+img.setAttribute("loading", "lazy");
+img.setAttribute("width", 400);
+img.setAttribute("height", 400);
+
+picture.appendChild(sourceDesktop);
+picture.appendChild(sourceTablet);
+picture.appendChild(img);</code></pre>
+            
+            <p>
+                The browser automatically selects the best image based on the user's device and screen size.
+            </p>
+
+            <h3>Lazy Loading for Images</h3>
+            <p>
+                Lazy loading defers loading images until they are about to enter the viewport by using the native <code>loading="lazy"</code> attribute.
+            </p>
+            
+            <pre><code>img.setAttribute("loading", "lazy");</code></pre>
+            
+            <p>
+                When an image has <code>loading="lazy"</code> the browser waits to load it.
+            </p>
+            
+            <h3>Learn More About Image Optimization</h3>
+            <ul>
+                <li><a href="https://byui-cse.github.io/wdd131-ww-course/week03/prepare-responsive-images.html" target="_blank" rel="noopener">WDD 131: Responsive Images</a> - Responsive image design and implementation.</li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank" rel="noopener">MDN Web Docs: Responsive Images</a> - Comprehensive guide on responsive images.</li>
+            </ul>
+            <p><small>Learning Activity: Where we made the web page about a country we wanted to visit. <a href="https://michaeljhtaggart.github.io/wdd131/place.html" target="_blank" rel="noopener">Country Page</a></small></p>
+        </section>
+    </main>
+    <footer>
+        <p>&#x00A9;<span id="currentyear"></span> - Michael J.H. Taggart - United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
+

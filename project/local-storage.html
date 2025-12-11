@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about localStorage and how it's used to store data in web browsers">
+    <meta name="keywords" content="Michael J.H. Taggart, WDD 131, Dynamic Web Fundamentals, web development, localStorage, JavaScript">
+    <meta name="author" content="Michael J.H. Taggart">
+    <title>Local Storage - Mastering Dynamic Web Sites</title>
+    <link rel="icon" href="./images/favicon.webp" type="image/webp">
+    <script defer src="./scripts/getdates.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/index-medium.css">
+    <link rel="stylesheet" href="./styles/index-large.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html">
+                <img src="./images/logo.webp" alt="Mastering Dynamic Websites logo" width="64" height="64">
+            </a>
+            <h1>Mastering Dynamic Websites</h1>
+        </div>
+        <nav class="bottom-nav">
+            <a href="index.html">Home</a>
+            <a href="topics.html">Topics</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <picture>
+            <source srcset="./images/unsplash-desktop-2.webp" media="(min-width: 1000px)" sizes="1440px">
+            <source srcset="./images/unsplash-tablet-2.webp" media="(min-width: 550px)" sizes="100vw">
+            <img src="./images/unsplash-mobile-2.webp" alt="Local Storage" width="400" height="400">
+        </picture>
+        
+        <section class="topic-content">
+            <h2>Local Storage</h2>
+            <p>
+                Local Storage is a web API that allows web applications to store data locally in the user's browser. 
+                Unlike session storage, data stored in localStorage persists even after the browser is closed, making it 
+                ideal for saving user preferences, form data, and application state.
+            </p>
+            <p>
+                The localStorage API provides simple methods to store and retrieve key-value pairs. Data is stored as strings, 
+                so when storing objects or numbers, we use <code>JSON.stringify()</code> and <code>JSON.parse()</code> 
+                to convert between formats. The storage limit is 5-10MB per domain.
+            </p>
+            
+            <h3>Local Storage in This Website</h3>
+            <p>
+                On this website, we track the number of times a "contact us" form is submitted. Here's the code that does that:
+            </p>
+            
+            <pre><code>const contactForm = document.querySelector('form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', () => {
+        let count = parseInt(localStorage.getItem('number_of_contact_messages')) || 0;
+        count++;
+        localStorage.setItem('number_of_contact_messages', count);
+    });
+}
+
+const numberOfContactMessages = document.getElementById('number_of_contact_messages');
+if (numberOfContactMessages) {
+    numberOfContactMessages.textContent = localStorage.getItem('number_of_contact_messages') || 0;
+}</code></pre>
+            
+            <h3>Learn More About Local Storage</h3>
+            <ul>
+                <li><a href="https://byui-cse.github.io/wdd131-ww-course/week05/prepare-localStorage.html" target="_blank" rel="noopener">WDD 131: Local Storage</a> - Official course content on localStorage implementation and usage.</li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">MDN Web Docs: Window.localStorage</a> - Comprehensive API reference for localStorage.</li>
+            </ul>
+            <p><small>Learning Activity: When we made a form that counts the number of contact messages submitted. <a href="https://michaeljhtaggart.github.io/wdd131/form.html" target="_blank" rel="noopener">Form Page</a></small></p>
+        </section>
+    </main>
+    <footer>
+        <p>&#x00A9;<span id="currentyear"></span> - Michael J.H. Taggart - United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
+
